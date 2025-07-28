@@ -1,0 +1,406 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+}
+
+.top-bar {
+    width: 100%;
+    height: 100px;
+    position: fixed;
+    background: black;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navibar {
+    margin-left: 50px;
+    font-size: 1.4rem;
+    color: white;
+    background: none;
+    border: none;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+.left-controls,
+.right-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navibar,
+.yticon,
+.micicon,
+.create,
+.bellicon,
+.searchicon {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 50px;
+}
+
+.yticon {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.yticon i {
+    color: red;
+    margin-right: 4px;
+}
+
+.yticon sup {
+    font-size: small;
+    color: gray;
+}
+
+.searchbar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-wrapper {
+    position: relative;
+}
+
+.search {
+    height: 40px;
+    width: 500px;
+    padding: 0 45px 0 20px;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 25px;
+    font-size: 1rem;
+}
+
+.search::placeholder {
+    color: gray;
+}
+
+.searchicon {
+    position: absolute;
+    right: 1px;
+    height: 40px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid grey;
+    border-left: none;
+    border-radius: 0 25px 25px 0;
+}
+
+.searchicon i {
+    pointer-events: none;
+}
+
+.micicon {
+    margin-left: 10px;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.create {
+    background-color: rgba(255, 255, 255, 0.2);
+    font-weight: 600;
+}
+
+.create span {
+    margin-right: 6px;
+}
+
+.navibar:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.micicon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.bellicon:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    width: 140px;
+    height: calc(100vh - 80px);
+    background-color: black;
+    padding: 10px 0;
+    text-decoration: none;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+
+.sidebar-menu {
+    list-style: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.sidebar-menu li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75rem;
+    color: white;
+    cursor: pointer;
+}
+
+.sidebar-menu li i {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.sidebar-menu li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* main content */
+/* Main content layout */
+.main-content {
+    margin-left: 140px;
+    /* adjust if sidebar is gone */
+    margin-top: 100px;
+    /* adjust based on top-bar height */
+    padding: 20px;
+}
+
+/* Grid system */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Video card style */
+.video-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 320px;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Thumbnail placeholder */
+.thumbnail-wrapper {
+    width: 100%;
+    height: 180px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.thumbnail {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Info below thumbnail */
+.video-info {
+    padding: 10px;
+}
+
+.video-title {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.channel-name {
+    color: gray;
+    font-size: 0.875rem;
+}
+
+/*  */
+.thumbnail {
+    width: 100%;
+    height: 180px;
+    /* fixed height for all */
+    object-fit: cover;
+    display: block;
+}
+
+.video-info-row {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    gap: 10px;
+}
+
+.channel-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #ddd;
+}
+
+.video-info {
+    flex: 1;
+}
+
+.video-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.channel-name {
+    font-size: 0.85rem;
+    color: gray;
+}
+
+/* Wraps thumbnail + duration */
+.thumbnail-wrapper {
+    position: relative;
+}
+
+/* Thumbnail image */
+.thumbnail {
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
+    display: block;
+}
+
+/* Duration badge (bottom-right corner) */
+.video-duration {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 2px 6px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+/* Channel + title row */
+.video-info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Channel logo */
+.channel-logo {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Info container */
+.video-info {
+    flex: 1;
+}
+
+/* Title */
+.video-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Channel name */
+.channel-name {
+    font-size: 0.85rem;
+    color: gray;
+    margin: 4px 0 0 0;
+}
+
+/* Meta: views & time */
+.video-meta {
+    font-size: 0.8rem;
+    color: gray;
+    margin: 2px 0 0 0;
+}
+
+body.dark {
+    background-color: #181818;
+    color: white;
+}
+
+body.dark .top-bar,
+body.dark .sidebar {
+    background-color: #202020;
+}
+
+body.dark .search,
+body.dark .searchicon {
+    border-color: gray;
+    background-color: #333;
+    color: white;
+}
+
+body.dark .video-card {
+    background-color: #2c2c2c;
+    color: white;
+}
+
+body.dark .video-meta,
+body.dark .channel-name {
+    color: #ccc;
+}
+
+.theme-toggle {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+}

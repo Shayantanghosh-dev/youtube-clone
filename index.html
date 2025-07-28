@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- linking css -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- linking icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- linking fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <!-- TOPBAR -->
+      <div class="top-bar">
+        <nav>
+          <div class="left-controls">
+            <button class="navibar" id="toggleSidebar">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="yticon">
+              <i class="fa-brands fa-youtube"></i>YouTube<sup>IN</sup>
+            </button>
+          </div>
+
+          <div class="searchbar">
+            <div class="search-wrapper">
+              <input type="text" class="search" placeholder="Search" />
+              <button class="searchicon">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <button class="micicon">
+              <i class="fa-solid fa-microphone"></i>
+            </button>
+          </div>
+
+          <div class="right-controls">
+            <button class="create">
+              <span><i class="fa-solid fa-plus"></i></span>Create
+            </button>
+            <button class="bellicon"><i class="fa-solid fa-bell"></i></button>
+            <button id="themeToggle">🌙</button>
+            <!-- <button class="pfp"><img src="./eap.png" alt="" /></button> -->
+          </div>
+        </nav>
+      </div>
+      <!-- SIDEBAR -->
+      <aside class="sidebar" id="sidebar">
+        <!-- Inside <div class="sidebar"> -->
+        <ul class="sidebar-menu">
+          <li><i class="fa-solid fa-house"></i><span>Home</span></li>
+          <li><i class="fa-solid fa-compass"></i> <span>Explore</span></li>
+          <li><i class="fa-solid fa-play"></i> <span>Subscriptions</span></li>
+          <li><i class="fa-solid fa-book"></i> <span>Library</span></li>
+          <li>
+            <i class="fa-solid fa-clock-rotate-left"></i> <span>History</span>
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <main class="main-content">
+      <div class="video-grid">
+        <!-- Repeat this block for each video -->
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1111318/pexels-photo-1111318.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">12:05</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">How to Build YouTube</h4>
+              <p class="channel-name">Code Master</p>
+              <p class="video-meta">3.4M views • 1 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dummy videos -->
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181354/pexels-photo-1181354.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">8:47</span>
+          </div>
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+            <div class="video-info">
+              <h4 class="video-title">Master CSS Flexbox in 10 Minutes</h4>
+              <p class="channel-name">DesignPro</p>
+              <p class="video-meta">879K views • 3 days ago</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add more video-card divs as needed -->
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/574071/pexels-photo-574071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">5:26</span>
+          </div>
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+            <div class="video-info">
+              <h4 class="video-title">Day in the Life of a Dev</h4>
+              <p class="channel-name">Tech Vibes</p>
+              <p class="video-meta">1.1M views • 2 months ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:04</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">CSS Grid Tutorial</h4>
+              <p class="channel-name">Design Hub</p>
+              <p class="video-meta">16.7M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:19</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Responsive Web Design</h4>
+              <p class="channel-name">Design Hub</p>
+              <p class="video-meta">8.1M views • 1 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:55</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Responsive Web Design</h4>
+              <p class="channel-name">Design Hub</p>
+              <p class="video-meta">4.3M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:34</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Modern UI Design Tips</h4>
+              <p class="channel-name">Web Ninja</p>
+              <p class="video-meta">2.2M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:46</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript Crash Course</h4>
+              <p class="channel-name">Web Ninja</p>
+              <p class="video-meta">5.7M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:55</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Build a Portfolio Site</h4>
+              <p class="channel-name">Design Hub</p>
+              <p class="video-meta">6.7M views • 4 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:21</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Build a Portfolio Site</h4>
+              <p class="channel-name">JS Wizard</p>
+              <p class="video-meta">9.1M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:12</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Master CSS Flexbox</h4>
+              <p class="channel-name">Web Ninja</p>
+              <p class="video-meta">13.4M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:02</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Dark Mode Toggle in 2 Mins</h4>
+              <p class="channel-name">JS Wizard</p>
+              <p class="video-meta">14.2M views • 2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:59</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Responsive Web Design</h4>
+              <p class="channel-name">Frontend Pro</p>
+              <p class="video-meta">3.6M views • 2 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:28</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript Crash Course</h4>
+              <p class="channel-name">Frontend Pro</p>
+              <p class="video-meta">17.6M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:21</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript Crash Course</h4>
+              <p class="channel-name">JS Wizard</p>
+              <p class="video-meta">8.2M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:45</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript Crash Course</h4>
+              <p class="channel-name">Stack Learners</p>
+              <p class="video-meta">15.0M views • 2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:38</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Modern UI Design Tips</h4>
+              <p class="channel-name">Dev Simplified</p>
+              <p class="video-meta">17.3M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:21</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Modern UI Design Tips</h4>
+              <p class="channel-name">JS Wizard</p>
+              <p class="video-meta">18.6M views • 2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:09</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript DOM Tricks</h4>
+              <p class="channel-name">Design Hub</p>
+              <p class="video-meta">5.4M views • 2 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:41</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">CSS Grid Tutorial</h4>
+              <p class="channel-name">ByteSized</p>
+              <p class="video-meta">4.5M views • 2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:11</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Modern UI Design Tips</h4>
+              <p class="channel-name">Tech Nerds</p>
+              <p class="video-meta">1.0M views • 4 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:22</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Dark Mode Toggle in 2 Mins</h4>
+              <p class="channel-name">ByteSized</p>
+              <p class="video-meta">6.7M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:29</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript DOM Tricks</h4>
+              <p class="channel-name">Frontend Pro</p>
+              <p class="video-meta">16.5M views • 4 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:54</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Dark Mode Toggle in 2 Mins</h4>
+              <p class="channel-name">Web Ninja</p>
+              <p class="video-meta">11.8M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:56</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript Crash Course</h4>
+              <p class="channel-name">ByteSized</p>
+              <p class="video-meta">19.5M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:39</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">CSS Grid Tutorial</h4>
+              <p class="channel-name">Frontend Pro</p>
+              <p class="video-meta">4.3M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:53</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript Crash Course</h4>
+              <p class="channel-name">Web Ninja</p>
+              <p class="video-meta">14.1M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:43</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">How to Build YouTube</h4>
+              <p class="channel-name">Dev Simplified</p>
+              <p class="video-meta">8.1M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:36</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">How to Build YouTube</h4>
+              <p class="channel-name">Tech Nerds</p>
+              <p class="video-meta">7.0M views • 3 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:23</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Build a Portfolio Site</h4>
+              <p class="channel-name">Frontend Pro</p>
+              <p class="video-meta">19.5M views • 4 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:35</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Responsive Web Design</h4>
+              <p class="channel-name">Dev Simplified</p>
+              <p class="video-meta">12.7M views • 4 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:03</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">CSS Grid Tutorial</h4>
+              <p class="channel-name">Frontend Pro</p>
+              <p class="video-meta">4.6M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:56</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Responsive Web Design</h4>
+              <p class="channel-name">ByteSized</p>
+              <p class="video-meta">14.3M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:29</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Build a Portfolio Site</h4>
+              <p class="channel-name">Frontend Pro</p>
+              <p class="video-meta">9.8M views • 2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:21</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Modern UI Design Tips</h4>
+              <p class="channel-name">Dev Simplified</p>
+              <p class="video-meta">19.0M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:13</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Master CSS Flexbox</h4>
+              <p class="channel-name">ByteSized</p>
+              <p class="video-meta">17.1M views • 2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:44</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">HTML Basics for Beginners</h4>
+              <p class="channel-name">Stack Learners</p>
+              <p class="video-meta">19.3M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:24</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript Crash Course</h4>
+              <p class="channel-name">Code Master</p>
+              <p class="video-meta">15.3M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:33</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Modern UI Design Tips</h4>
+              <p class="channel-name">UI Devs</p>
+              <p class="video-meta">5.2M views • 4 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:18</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript DOM Tricks</h4>
+              <p class="channel-name">Design Hub</p>
+              <p class="video-meta">11.2M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:30</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Modern UI Design Tips</h4>
+              <p class="channel-name">JS Wizard</p>
+              <p class="video-meta">19.1M views • 3 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:34</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Dark Mode Toggle in 2 Mins</h4>
+              <p class="channel-name">Tech Nerds</p>
+              <p class="video-meta">19.5M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:51</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript DOM Tricks</h4>
+              <p class="channel-name">Tech Nerds</p>
+              <p class="video-meta">15.5M views • 3 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:44</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Modern UI Design Tips</h4>
+              <p class="channel-name">UI Devs</p>
+              <p class="video-meta">19.6M views • 2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:57</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Master CSS Flexbox</h4>
+              <p class="channel-name">UI Devs</p>
+              <p class="video-meta">3.4M views • 4 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:22</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">How to Build YouTube</h4>
+              <p class="channel-name">JS Wizard</p>
+              <p class="video-meta">18.6M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:46</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">HTML Basics for Beginners</h4>
+              <p class="channel-name">Frontend Pro</p>
+              <p class="video-meta">2.5M views • 4 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:01</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Modern UI Design Tips</h4>
+              <p class="channel-name">Dev Simplified</p>
+              <p class="video-meta">10.1M views • 3 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:19</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Build a Portfolio Site</h4>
+              <p class="channel-name">JS Wizard</p>
+              <p class="video-meta">3.5M views • 1 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:12</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">CSS Grid Tutorial</h4>
+              <p class="channel-name">Design Hub</p>
+              <p class="video-meta">2.3M views • 3 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">2:29</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Dark Mode Toggle in 2 Mins</h4>
+              <p class="channel-name">Tech Nerds</p>
+              <p class="video-meta">13.4M views • 2 week ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/1181353/pexels-photo-1181353.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:43</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">Master CSS Flexbox</h4>
+              <p class="channel-name">Tech Nerds</p>
+              <p class="video-meta">19.1M views • 1 weeks ago</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="thumbnail-wrapper">
+            <img
+              class="thumbnail"
+              src="https://images.pexels.com/photos/3747136/pexels-photo-3747136.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=140"
+              alt="thumbnail"
+            />
+            <span class="video-duration">1:49</span>
+          </div>
+
+          <div class="video-info-row">
+            <img
+              class="channel-logo"
+              src="https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=68"
+              alt="channel logo"
+            />
+
+            <div class="video-info">
+              <h4 class="video-title">JavaScript DOM Tricks</h4>
+              <p class="channel-name">JS Wizard</p>
+              <p class="video-meta">8.3M views • 2 weeks ago</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="overlay"></div>
+  </body>
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById("themeToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+    });
+  </script>
+</html>
